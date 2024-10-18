@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <ul>
+            <li>
+                <a href="index.html"></a>
+            </li>
+        </ul>
+        <section id="contact">
+            <h2 class="pop">Обратная связь</h2>
+            <form action="" id="contact-form">
+                <div class="form__item">
+                    <label for="topic">Тема:</label><br>
+                    <select name="topic" id="topic" required>
+                        <option value="general">Общий вопрос</option>
+                        <option value="feedback">Отзыв</option>
+                        <option value="support">Поддержка</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label for="name">Имя:</label><br>
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__item">
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" placeholder="Ваш email" required>
+                </div>
+                <div class="form__item">
+                    <label for="message">Сообщение:</label><br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Ваше сообщение" required></textarea>
+                </div>
+                <div class="form__item">
+                    <input type="submit" name="Отправить" id="">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

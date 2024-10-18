@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скример с Фредди</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+        #screamer {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        #screamer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div id="screamer">
+    <img src="freddy.gif" alt="Скример Фредди">
+</div>
+
+<audio id="scream-sound" src="scream.mp3"></audio>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const screamer = document.getElementById('screamer');
+        const screamSound = document.getElementById('scream-sound');
+
+        setTimeout(function() {
+            screamer.style.display = 'block';
+            screamSound.play().catch((error) => console.error('Ошибка воспроизведения:', error));
+        }, 50);
+    });
+</script>
+</body>
+</html>
